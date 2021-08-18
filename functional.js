@@ -87,10 +87,22 @@ const imperativeLengths = (elements) => {
 // console.log(imperativeLengths(states));
 
 const functionalLengths = (elements) => {
-  return elements.reduce((lengths, element) => {
-    lengths[element] = element.length;
-    return lengths;
-  }, {})
+  return elements.reduce((lengths, element) => {lengths[element] = element.length; return lengths; }, {})
 }
 
-// console.log(functionalLengths(states));
+console.log(functionalLengths(states));
+
+const imperativeMultiplication = (elements) => {
+  let total = 1;
+  elements.forEach(n => {
+    total *= n;
+  })
+  return total;
+}
+// console.log(imperativeMultiplication(numbers));
+
+const functionalMultiplication = (elements) => {
+  return elements.reduce((total, n) => { return total*= n; })
+}
+
+// console.log(functionalMultiplication(numbers));
