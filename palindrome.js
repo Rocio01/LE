@@ -2,6 +2,14 @@ String.prototype.reverse = function reverse(){
   return Array.from(this).reverse().join("");
 }
 
+String.prototype.blank = function blank(){
+  return !!(this.match(/\s/mg) || this.length === 0);
+} 
+
+Array.prototype.last = function last() {
+  return this.pop();
+} 
+
 function Phrase(content){
   this.content = content;
   this.processor = function processor(str){
